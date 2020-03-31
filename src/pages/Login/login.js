@@ -9,8 +9,10 @@ const newStyle = {
     width: '100%',
     height: '100vh',
     backgroundImage: `url(${bg})`,
-    backgroundSize: '100% 100%',
+    backgroundSize: 'contain',
     backgroundRepeat: 'no-repeat',
+    backgroundAttachment: 'fixed',
+    backgroundPosition: 'center',
   },
 };
 export default function Login() {
