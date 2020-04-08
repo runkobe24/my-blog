@@ -1,6 +1,13 @@
-const { override, fixBabelImports, addLessLoader, addWebpackPlugin } = require('customize-cra');
+const {
+  override,
+  fixBabelImports,
+  addLessLoader,
+
+  addWebpackAlias,
+} = require('customize-cra');
 //const AntdDayjsWebpackPlugin = require('antd-dayjs-webpack-plugin');
 const CompressionWebpackPlugin = require('compression-webpack-plugin');
+const path = require('path');
 // 打包配置
 const addCustomize = () => config => {
   if (process.env.NODE_ENV === 'production') {
@@ -31,5 +38,8 @@ module.exports = override(
   addLessLoader({
     javascriptEnabled: true,
     modifyVars: { '@primary-color': '#1DA57A' },
+  }),
+  addWebpackAlias({
+    '@': path.resolve(__dirname, 'src'),
   }),
 );

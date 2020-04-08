@@ -50,8 +50,8 @@ axios.interceptors.request.use(
     //console.log(configUrl.split('%'), '获取的url字符串');
 
     //  console.log(config, 'config---------');
-    addPending(config);
-    removePending(config);
+    // addPending(config);
+    // removePending(config);
 
     //const token = sessionStorage.getItem('token');
     const token = '3e1a2768034d4b5c8fad143604eee432_4f30fb53158045668a8c0b7992f34d61';
@@ -179,35 +179,35 @@ export function fetchApi(url, options, data) {
         let errorMsg = '';
         if (error) {
           console.log(error, '错误的');
-          switch (error.response.status) {
-            case 400:
-              console.log(error.response, '错误回调-----');
+          // switch (error.response.status) {
+          //   case 400:
+          //     console.log(error.response, '错误回调-----');
 
-              errorMsg = `${error.response.data.message}`;
-              break;
-            case 404:
-              errorMsg = '404请求地址出错';
-              break;
-            case 408:
-              errorMsg = '408请求超时';
-              break;
-            case 500:
-              errorMsg = '500服务器内部错误';
-              break;
-            case 502:
-              errorMsg = '502网关错误';
-              break;
-            case 504:
-              errorMsg = '504网关超时';
-              break;
-            case 40302:
-              errorMsg = '系统维护中，请稍后登录';
-              break;
-            default:
-              //errorMsg = '系统维护中，请稍后登录';
-              errorMsg = 'none';
-              break;
-          }
+          //     errorMsg = `${error.response.data.message}`;
+          //     break;
+          //   case 404:
+          //     errorMsg = '404请求地址出错';
+          //     break;
+          //   case 408:
+          //     errorMsg = '408请求超时';
+          //     break;
+          //   case 500:
+          //     errorMsg = '500服务器内部错误';
+          //     break;
+          //   case 502:
+          //     errorMsg = '502网关错误';
+          //     break;
+          //   case 504:
+          //     errorMsg = '504网关超时';
+          //     break;
+          //   case 40302:
+          //     errorMsg = '系统维护中，请稍后登录';
+          //     break;
+          //   default:
+          //     //errorMsg = '系统维护中，请稍后登录';
+          //     errorMsg = 'none';
+          //     break;
+          // }
         } else if (error.request) {
           errorMsg = '请求失败';
         } else {

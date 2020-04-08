@@ -14,6 +14,8 @@
     "compression-webpack-plugin": "^3.0.1",
     "customize-cra": "^0.9.1",
     "eslint-plugin-prettier": "^3.1.2",
+    "immer": "^6.0.3",
+    "immutable": "^4.0.0-rc.12",
     "less": "^3.10.3",
     "less-loader": "^5.0.0",
     "nprogress": "^0.2.0",
@@ -23,8 +25,10 @@
     "react-app-rewired": "^2.1.5",
     "react-dom": "^16.12.0",
     "react-loadable": "^5.5.0",
+    "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "^3.3.0"
+    "react-scripts": "^3.3.0",
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -46,5 +50,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "eslint-plugin-react-hooks": "^3.0.0"
   }
 }
