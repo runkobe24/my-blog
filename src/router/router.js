@@ -43,5 +43,11 @@ const routes = [
     exact: true,
     component: Loadable(() => import('../pages/Article/ArticleDetails')),
   },
+  {
+    title: 'Edit',
+    path: '/Atricle/edit',
+    exact: true,
+    component: Loadable(() => import('../pages/Article/ArticleEdit')),
+  },
 ];
 export default routes;

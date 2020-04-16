@@ -5,17 +5,17 @@ const MeanList = [
   {
     id: 1,
     name: '首页',
-    toLink: '/home',
+    toLink: '/Home',
   },
   {
     id: 2,
     name: '文章',
-    toLink: '/article',
+    toLink: '/Article',
   },
   {
     id: 3,
     name: '关于',
-    toLink: '/about',
+    toLink: '/About',
   },
 ];
 function Linkto(item, props, history) {
